@@ -80,7 +80,7 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 						</div>
 					</div>
 				</form>
-				<!-- Navigation -->
+				<!-- 메뉴시작 -->
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link " href="../index.jsp">
 							<i class="ni ni-tv-2 text-purple"></i>스마트 분석
@@ -93,44 +93,52 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 						href="../examples/site_analysis.jsp"> <i
 							class="ni ni-diamond text-purple"></i> 사이트 분석
 					</a></li>
+				</ul>
+				<!-- 게시판 문의사항 -->
+				<hr class="my-3">
+				<h6 class="navbar-heading text-muted">LUXURY</h6>
+				<ul class="navbar-nav mb-md-3">
+					<% if (user != null) { %>
 					<li class="nav-item"><a class="nav-link active"
 						href="../examples/tables.jsp"> <i
 							class="ni ni-bullet-list-67 text-purple"></i> 게시판
 					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="../examples/tables.jsp"> <i
+							class="ni ni-bulb-61 text-purple"></i> 문의사항
+					</a></li>
+					<% } else {	%>
+					<li class="nav-item"><a class="nav-link active" href="#"
+						data-toggle="popover" data-placement="right"
+						data-content="로그인 후 사용 가능합니다"> <i
+							class="ni ni-bullet-list-67 text-purple"></i> 게시판
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"
+						data-toggle="popover" data-placement="right"
+						data-content="로그인 후 사용 가능합니다"> <i
+							class="ni ni-bulb-61 text-purple"></i> 문의사항
+					</a></li>
+					<% } %>
 				</ul>
-				<!-- Divider -->
+				<!-- 로그인 회원가입 -->
 				<hr class="my-3">
-				<!-- Heading -->
-				<h6 class="navbar-heading text-muted">회원</h6>
-				<!-- Navigation -->
+				<h6 class="navbar-heading text-muted">MEMBER</h6>
 				<ul class="navbar-nav mb-md-3">
-					<nav>
-						<%
-						if (user != null) {
-						%>
-						<li class="nav-item"><a class="nav-link"
-							href="./logout.jsp"> <i
-								class="ni ni-key-25 text-dark"></i> 로그아웃
-						</a></li>
-						<li class="nav-item"><a class="nav-link "
-							href="./profile.jsp"> <i
-								class="ni ni-single-02 text-purple"></i> 프로필
-						</a></li>
-						<%
-						} else {
-						%>
-						<li class="nav-item"><a class="nav-link"
-							href="./login.jsp"> <i
-								class="ni ni-key-25 text-info"></i> 로그인
-						</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="./register.jsp"> <i
-								class="ni ni-circle-08 text-purple"></i> 회원가입
-						</a></li>
-						<%
-						}
-						%>
-					</nav>
+					<% if (user != null) { %>
+					<li class="nav-item"><a class="nav-link" href="./logout.jsp">
+						<i class="ni ni-key-25 text-dark"></i> 로그아웃
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="./profile.jsp">
+						<i class="ni ni-single-02 text-purple"></i> 프로필
+					</a></li>
+					<% } else {	%>
+					<li class="nav-item"><a class="nav-link" href="./login.jsp">
+							<i class="ni ni-key-25 text-purple"></i> 로그인
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="./register.jsp">
+						<i class="ni ni-circle-08 text-purple"></i> 회원가입
+					</a></li>
+					<% } %>
 				</ul>
 			</div>
 		</div>
@@ -170,7 +178,7 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 									src="https://t1.daumcdn.net/cfile/blog/99B7C0385ADDFED01A">
 								</span>
 								<div class="media-body ml-2 d-none d-lg-block">
-									<span class="mb-0 text-sm  font-weight-bold">신비</span>
+									<span class="mb-0 text-sm  font-weight-bold"> 황은비</span>
 								</div>
 							</div>
 					</a>
@@ -183,7 +191,7 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 							</a>
 							<div class="dropdown-divider"></div>
 							<a href="./examples/logout.jsp" class="dropdown-item"> <i
-								class="ni ni-key-25 text-dark"></i> <span>로그아웃</span>
+								class="ni ni-key-25 text-purple"></i> <span>로그아웃</span>
 							</a>
 						</div></li>
 					<%
