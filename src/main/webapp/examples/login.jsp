@@ -134,6 +134,7 @@ Luxury Trend 로그인
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-primary mt-1">로그인</button>
+                <button type="button" onclick="location.href='register.jsp'" class="btn btn-primary mt-1">회원가입</button>
             </div>
             </form>
         </div>
