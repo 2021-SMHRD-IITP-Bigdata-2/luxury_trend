@@ -36,89 +36,98 @@
       </a>
       <!-- 메뉴바 -->
       <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-        <!-- Collapse header -->
-        <div class="navbar-collapse-header d-md-none">
-          <div class="row">
-            <div class="col-6 collapse-brand">
-              <a href="./index.jsp">
-                <img src="./assets/img/brand/luxurysdf.png">
-              </a>
-            </div>
-            <div class="col-6 collapse-close">
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Form -->
-        <form class="mt-4 mb-3 d-md-none">
-          <div class="input-group input-group-rounded input-group-merge">
-            <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <span class="fa fa-search"></span>
-              </div>
-            </div>
-          </div>
-        </form>
-         <!-- Navigation -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">
-              <i class="ni ni-tv-2 text-purple"></i>스마트 분석
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/only.jsp">
-              <i class="ni ni-chart-pie-35 text-purple"></i> 상품 분석 
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="./examples/site_analysis.jsp">
-              <i class="ni ni-diamond text-purple"></i> 사이트 분석
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/tables.jsp">
-              <i class="ni ni-bullet-list-67 text-purple"></i> 게시판
-            </a>
-          </li>
-        </ul>
-        <!-- Divider -->
-        <hr class="my-3">
-        <!-- Heading -->
-        <h6 class="navbar-heading text-muted">회원</h6>
-        <!-- Navigation -->
-        <ul class="navbar-nav mb-md-3">
-          <nav>
-          <%if(user != null) {%>
-          	<li class="nav-item">
-	            <a class="nav-link" href="./examples/logout.jsp">
-	              <i class="ni ni-key-25 text-dark"></i> 로그아웃
-	            </a>
-         	</li>
-            <li class="nav-item">
-	            <a class="nav-link " href="./examples/profile.jsp">
-	              <i class="ni ni-single-02 text-purple"></i> 프로필
-	            </a>
-          	</li>          
-          <%}else{ %>
-	          <li class="nav-item">
-	            <a class="nav-link" href="./examples/login.jsp">
-	              <i class="ni ni-key-25 text-info"></i> 로그인
-	            </a>
-	          </li>   
-	          <li class="nav-item">
-	            <a class="nav-link" href="./examples/register.jsp">
-	              <i class="ni ni-circle-08 text-pink"></i> 회원가입
-	            </a>
-	          </li>
-          <%} %>
-          </nav>
-        </ul> 
-      </div>
+				<!-- Collapse header -->
+				<div class="navbar-collapse-header d-md-none">
+					<div class="row">
+						<div class="col-6 collapse-brand">
+							<a href="./index.html"> <img
+								src="./assets/img/brand/blue.png">
+							</a>
+						</div>
+						<div class="col-6 collapse-close">
+							<button type="button" class="navbar-toggler"
+								data-toggle="collapse" data-target="#sidenav-collapse-main"
+								aria-controls="sidenav-main" aria-expanded="false"
+								aria-label="Toggle sidenav">
+								<span></span> <span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Form -->
+				<form class="mt-4 mb-3 d-md-none">
+					<div class="input-group input-group-rounded input-group-merge">
+						<input type="search"
+							class="form-control form-control-rounded form-control-prepended"
+							placeholder="Search" aria-label="Search">
+						<div class="input-group-prepend">
+							<div class="input-group-text">
+								<span class="fa fa-search"></span>
+							</div>
+						</div>
+					</div>
+				</form>
+				<!-- 메뉴시작 -->
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link active" href="./index.jsp">
+							<i class="ni ni-tv-2 text-purple"></i>스마트 분석
+					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="./examples/only.jsp"> <i
+							class="ni ni-chart-pie-35 text-purple"></i> 상품 분석
+					</a></li>
+					<li class="nav-item"><a class="nav-link "
+						href="./examples/site_analysis.jsp"> <i
+							class="ni ni-diamond text-purple"></i> 사이트 분석
+					</a></li>
+				</ul>
+				<!-- 게시판 문의사항 -->
+				<hr class="my-3">
+				<h6 class="navbar-heading text-muted">Luxury</h6>
+				<ul class="navbar-nav mb-md-3">
+					<% if (user != null) { %>
+					<li class="nav-item"><a class="nav-link"
+						href="./examples/tables.jsp"> <i
+							class="ni ni-bullet-list-67 text-purple"></i> 게시판
+					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="./examples/question.jsp"> <i
+							class="ni ni-bulb-61 text-purple"></i> 문의사항
+					</a></li>
+					<% } else {	%>
+					<li class="nav-item"><a class="nav-link" href="#"
+						data-toggle="popover" data-placement="right"
+						data-content="로그인 후 사용 가능합니다"> <i
+							class="ni ni-bullet-list-67 text-purple"></i> 게시판
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"
+						data-toggle="popover" data-placement="right"
+						data-content="로그인 후 사용 가능합니다"> <i
+							class="ni ni-bulb-61 text-purple"></i> 문의사항
+					</a></li>
+					<% } %>
+				</ul>
+				<!-- 로그인 회원가입 -->
+				<hr class="my-3">
+				<h6 class="navbar-heading text-muted">Member</h6>
+				<ul class="navbar-nav mb-md-3">
+					<% if (user != null) { %>
+					<li class="nav-item"><a class="nav-link" href="./examples/logout.jsp">
+						<i class="ni ni-key-25 text-dark text-purple"></i> 로그아웃
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="./examples/profile.jsp">
+						<i class="ni ni-single-02 text-purple"></i> 프로필
+					</a></li>
+					<% } else {	%>
+					<li class="nav-item"><a class="nav-link" href="./examples/login.jsp">
+							<i class="ni ni-key-25 text-purple"></i> 로그인
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="./examples/register.jsp">
+						<i class="ni ni-circle-08 text-purple"></i> 회원가입
+					</a></li>
+					<% } %>
+				</ul>
+			</div>
     </div>
   </nav>
   <!-- 상단바 -->
@@ -133,7 +142,7 @@
           <div class="form-group mb-0">
             <div class="input-group input-group-alternative">
               <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                <span class="input-group-text" onclick="location.href='http://localhost:8081/LuxuryPratice2/examples/only.jsp'"><i class="fas fa-search"></i></span></a>
               </div>
               <input class="form-control" placeholder="Search" type="text">
             </div>
@@ -149,7 +158,7 @@
                   <img alt="" src="https://t1.daumcdn.net/cfile/blog/99B7C0385ADDFED01A">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">Eunbi Hwang</span>
+                  <span class="mb-0 text-sm  font-weight-bold"> 황은비 </span>
                 </div>
               </div>
             </a>
@@ -163,7 +172,7 @@
               </a>
               <div class="dropdown-divider"></div>
               <a href="./examples/logout.jsp" class="dropdown-item">
-                <i class="ni ni-key-25 text-dark"></i>
+                <i class="ni ni-key-25 text-purple"></i>
                 <span>로그아웃</span>
               </a>
             </div>
@@ -176,7 +185,7 @@
                   <img alt="" src="./assets/img/user/비회원.png">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">로그인을 하세요</span>
+                  <span class="mb-0 text-sm  font-weight-bold">비회원</span>
                 </div>
               </div>
             </a>
@@ -185,11 +194,11 @@
                 <h6 class="text-overflow m-0">방문을 환영합니다</h6>
               </div>
               <a href="./examples/login.jsp" class="dropdown-item">
-                <i class="ni ni-key-25 text-info"></i>
+                <i class="ni ni-key-25 text-info text-purple"></i>
                 <span>로그인</span>
               </a>
               <a href="./examples/register.jsp" class="dropdown-item">
-                <i class="ni ni-circle-08 text-pink"></i>
+                <i class="ni ni-circle-08 text-purple"></i>
                 <span>회원가입</span>
               </a>
             </div>
