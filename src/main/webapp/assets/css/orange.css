@@ -233,9 +233,10 @@
   }
 
   /* tables 에 있는 이미지 */
-  .tables_img{
-  	width:80%;
-  	height:80%;
+  tables_img.
+   {
+  	width:100%;
+  	height:100%;
    }
   
   svg {
