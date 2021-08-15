@@ -1,6 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page import="user.UserDAO"%>
+<%@page import="user.UserDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<% UserDTO user = (UserDTO)session.getAttribute("login");%>
   
+ <!-- 상품 분석 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,8 +25,6 @@
   <!-- CSS Files -->
   <link href="../assets/css/orange.css" rel="stylesheet" />
 </head>
-
-.
 <body class="">
   <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
     <div class="container-fluid">
@@ -140,21 +143,31 @@
         <h6 class="navbar-heading text-muted">회원</h6>
         <!-- Navigation -->
         <ul class="navbar-nav mb-md-3">
-          <li class="nav-item">
-            <a class="nav-link" href="../examples/login.jsp">
-              <i class="ni ni-key-25 text-info"></i> 로그인
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../examples/register.jsp">
-              <i class="ni ni-circle-08 text-pink"></i> 회원가입
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="../examples/profile.jsp">
-              <i class="ni ni-single-02 text-yellow"></i> 프로필
-            </a>
-          </li>
+          <nav>
+          <%if(user != null) {%>
+          	<li class="nav-item">
+	            <a class="nav-link" href="../examples/logout.jsp">
+	              <i class="ni ni-key-25 text-dark"></i> 로그아웃
+	            </a>
+         	</li>
+            <li class="nav-item">
+	            <a class="nav-link " href="../examples/profile.jsp">
+	              <i class="ni ni-single-02 text-yellow"></i> 프로필
+	            </a>
+          	</li>          
+          <%}else{ %>
+	          <li class="nav-item">
+	            <a class="nav-link" href="./examples/login.jsp">
+	              <i class="ni ni-key-25 text-info"></i> 로그인
+	            </a>
+	          </li>   
+	          <li class="nav-item">
+	            <a class="nav-link" href="./examples/register.jsp">
+	              <i class="ni ni-circle-08 text-pink"></i> 회원가입
+	            </a>
+	          </li>
+          <%} %>
+          </nav>
         </ul>
       </div>
     </div>
