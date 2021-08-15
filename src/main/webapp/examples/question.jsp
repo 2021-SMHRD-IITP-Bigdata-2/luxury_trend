@@ -149,18 +149,22 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 				<a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./question">문의사항</a>
 				<!-- 유저화면 -->
 				<ul class="navbar-nav align-items-center d-none d-md-flex">
-					<% if (user != null) { %>
-					<li class="nav-item dropdown">
-						<a href="#" class="nav-link pr-0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<%
+					if (user != null) {
+					%>
+					<li class="nav-item dropdown"><a class="nav-link pr-0"
+						href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">
 							<div class="media align-items-center">
-								<span class="avatar avatar-sm rounded-circle">
-									<img alt="" src="https://t1.daumcdn.net/cfile/blog/99B7C0385ADDFED01A">
+								<span class="avatar avatar-sm rounded-circle"> <img
+									alt=""
+									src="https://t1.daumcdn.net/cfile/blog/99B7C0385ADDFED01A">
 								</span>
 								<div class="media-body ml-2 d-none d-lg-block">
-									<span class="mb-0 text-sm  font-weight-bold">신비</span>
+									<span class="mb-0 text-sm  font-weight-bold"> 황은비</span>
 								</div>
 							</div>
-						</a>
+					</a>
 						<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
 							<div class=" dropdown-header noti-title">
 								<h6 class="text-overflow m-0">일반회원</h6>
@@ -170,32 +174,37 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 							</a>
 							<div class="dropdown-divider"></div>
 							<a href="./logout.jsp" class="dropdown-item"> <i
-								class="ni ni-key-25 text-dark"></i> <span>로그아웃</span>
+								class="ni ni-key-25 text-purple"></i> <span>로그아웃</span>
 							</a>
 						</div></li>
-					<% } else { %>
-					<li class="nav-item dropdown">
-						<a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<%
+					} else {
+					%>
+					<li class="nav-item dropdown"><a class="nav-link pr-0"
+						href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">
 							<div class="media align-items-center">
-								<span class="avatar avatar-sm rounded-circle">
-									<img alt="" src="../assets/img/user/비회원.png">
+								<span class="avatar avatar-sm rounded-circle"> <img
+									alt="" src="../assets/img/user/비회원.png">
 								</span>
 								<div class="media-body ml-2 d-none d-lg-block">
-									<span class="mb-0 text-sm  font-weight-bold">비회원</span>
+									<span class="mb-0 text-sm  font-weight-bold">로그인을 하세요</span>
 								</div>
 							</div>
-						</a>
+					</a>
 						<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
 							<div class=" dropdown-header noti-title">
 								<h6 class="text-overflow m-0">방문을 환영합니다</h6>
 							</div>
-							<a href="./login.jsp" class="dropdown-item"> <i
-								class="ni ni-key-25 text-info text-purple"></i> <span>로그인</span>
-							</a> <a href="./register.jsp" class="dropdown-item"> <i
+							<a href="./examples/login.jsp" class="dropdown-item"> <i
+								class="ni ni-key-25 text-info"></i> <span>로그인</span>
+							</a> <a href="./examples/register.jsp" class="dropdown-item"> <i
 								class="ni ni-circle-08 text-purple"></i> <span>회원가입</span>
 							</a>
 						</div></li>
-					<% } %>
+					<%
+					}
+					%>
 				</ul>
 			</div>
 		</nav>
