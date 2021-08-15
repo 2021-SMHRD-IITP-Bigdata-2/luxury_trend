@@ -298,68 +298,120 @@
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
-      <!-- Table -->
-      
-      <div class="row">
-        <div class="col">
-          <div class="card shadow">
-            <div class="card-header bg-transparent">
-              <h3 class="mb-0">Icons</h3>
-            </div>
-            <div class="card-body">
-              <div class="row icon-examples">
-                <div class="col-lg-3 col-md-6">
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+			<!-- Table -->
+
+			<div class="row">
+			
+				<div class="col-xl-12 col-lg-6">
+					<div class="card shadow">
+						<div class="card-header bg-transparent">
+							<h3 class="mb-0">상품 비교</h3>
+						</div>
+						<div class="col-lg-3 col-md-4"></div>
+						<!-- ..........neyong -->
+						<div class="only_contents">
+							<!-- 1 -->
+							<!-- <div class="card-body">
+								<div class="card" style="width: 18rem;">
+									<img class="card-img-top"
+										src="https://pds.joins.com/news/component/htmlphoto_mmdata/202011/02/5f669eb0-e8be-44d3-8011-79d5ba8d302e.jpg"
+										alt="Card image cap">
+									<div class="card-body">
+										<p class="card-text">Some quick example text to build on
+											the card title and make up the bulk of the card's content.</p>
+									</div>
+								</div>
+							</div> -->
+							
+							
+<div class="container">
+  <div class="card-deck">
+    <div class="card" *ngFor="let item of cards">
+      <div class="embed-responsive embed-responsive-4by3">
+        <img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA3MjNfMTE1/MDAxNTYzODIyNzc0NzUz.x-xmcLRUyERmyjTIm-i1rjFZ6dHyB0_1SUlZ4Jp565og.uxSr8LCL99Q2S93z4rSe7Sya_b3Wuoy3NYAYSUhrSwEg.PNG.bbalebang/%EB%8B%B9%EA%B7%BC%EB%A7%88%EC%BC%93.png?type=w800" class="card-img-top embed-responsive-item" alt="tree">
       </div>
-            <div class="row">
-        <div class="col">
-          <div class="card shadow">
-            <div class="card-header bg-transparent">
-              <h3 class="mb-0">Icons</h3>
-            </div>
-            <div class="card-body">
-              <div class="row icon-examples">
-                <div class="col-lg-3 col-md-6">
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="card-body">
+        <h1 class="card-title">샤넬 클래식 백</h1>
+        <h2 class="card-subtitle">가격 : 140만원</h2>
+        <p class="card-text mt-3">1개월 이내 가격</p>
       </div>
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="row align-items-center justify-content-xl-between">
-          <div class="col-xl-6">
-            <div class="copyright text-center text-xl-left text-muted">
-              &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
-            </div>
-          </div>
-          <div class="col-xl-6">
-            <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
     </div>
   </div>
+</div>
+				
+							<!-- 2 -->
+							<!-- <div class="card-body">
+								<div class="card" style="width: 18rem;">
+									<img class="card-img-top"
+										src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTiQdQup_TpK7-gCRhsnI7EPyMObxcK0giEg&usqp=CAU"
+										alt="Card image cap">
+									<div class="card-body">
+										<p class="card-text">Some quick example text to build on
+											the card title and make up the bulk of the card's content.</p>
+									</div>
+								</div>	
+							</div> -->
+<div class="container">
+  <div class="card-deck">
+    <div class="card" *ngFor="let item of cards">
+      <div class="embed-responsive embed-responsive-4by3">
+        <img src="https://api.seumlaw.com/images/seum_2b0c6bd440ca4a23a5ce5830026d67b0.jpg" class="card-img-top embed-responsive-item" alt="tree">
+      </div>
+      <div class="card-body">
+        <h1 class="card-title">샤넬 클래식 백</h1>
+        <h2 class="card-subtitle">가격 : 135만원</h2>
+        <p class="card-text mt-3">1개월 이내 가격</p>
+      </div>
+    </div>
+  </div>
+</div>						
+							<!-- 3 -->
+<!-- 							<div class="card-body"> 
+								<div class="card" style="width: 18rem;">
+									<img class="card-img-top"
+										src="../assets/img/brand/JG.png"
+										alt="Card image cap">
+	
+									<div class="card-body">
+										<p class="card-text">Some quick example text to build on
+										the card title and make up the bulk of the card's content.</p>
+									</div>
+								</div>
+							</div> -->
+<div class="container">
+  <div class="card-deck">
+    <div class="card" *ngFor="let item of cards">
+      <div class="embed-responsive embed-responsive-4by3">
+        <img src="http://www.denews.co.kr/news/photo/202006/14032_15515_3925.jpg" class="card-img-top embed-responsive-item" alt="tree">
+      </div>
+      <div class="card-body">
+        <h1 class="card-title">샤넬 클래식 백</h1>
+        <h2 class="card-subtitle">가격 : 145만원</h2>
+        <p class="card-text mt-3">1개월 이내 가격</p>
+      </div>
+    </div>
+  </div>
+</div>	
+							<!-- 4 -->
+<!-- 							<div class="card-body"> 
+								<div class="card" style="width: 18rem;">
+									<img class="card-img-top"
+										src="../assets/img/brand/VJ.png"
+										alt="Card image cap">
+	
+									<div class="card-body">
+										<p class="card-text">Some quick example text to build on
+										the card title and make up the bulk of the card's content.</p>
+									</div>
+								</div>
+							</div> -->
+	
+						</div>
+					</div>
+				</div>
+			</div>
+
+
   <!--   Core   -->
   <script src="../assets/js/plugins/jquery/dist/jquery.min.js"></script>
   <script src="../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
