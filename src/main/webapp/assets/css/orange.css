@@ -15854,7 +15854,11 @@
     background: #f7fafc;
     padding: 2.5rem 0;
   }
-  
+
+   .footer-copy:hover{
+  	color:darkorange;
+  } 
+
   .footer .col-footer .heading {
     color: #8898aa;
     letter-spacing: 0;
