@@ -36,55 +36,6 @@
       <a class="navbar-brand pt-0" href="../index.jsp">
         <img src="../assets/img/brand/logo.png" class="navbar-brand-img" alt="...">
       </a>
-      <!-- User -->
-      <ul class="nav align-items-center d-md-none">
-        <li class="nav-item dropdown">
-          <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ni ni-bell-55"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="media align-items-center">
-              <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="../assets/img/theme/team-1-800x800.jpg">
-              </span>
-            </div>
-          </a>
-          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-            <div class=" dropdown-header noti-title">
-              <h6 class="text-overflow m-0">Welcome!</h6>
-            </div>
-            <a href="../examples/profile.jsp" class="dropdown-item">
-              <i class="ni ni-single-02"></i>
-              <span>My profile</span>
-            </a>
-            <a href="../examples/profile.jsp" class="dropdown-item">
-              <i class="ni ni-settings-gear-65"></i>
-              <span>Settings</span>
-            </a>
-            <a href="../examples/profile.jsp" class="dropdown-item">
-              <i class="ni ni-calendar-grid-58"></i>
-              <span>Activity</span>
-            </a>
-            <a href="../examples/profile.jsp" class="dropdown-item">
-              <i class="ni ni-support-16"></i>
-              <span>Support</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#!" class="dropdown-item">
-              <i class="ni ni-user-run"></i>
-              <span>Logout</span>
-            </a>
-          </div>
-        </li>
-      </ul>
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="sidenav-collapse-main">
         <!-- Collapse header -->
@@ -152,7 +103,7 @@
          	</li>
             <li class="nav-item">
 	            <a class="nav-link " href="../examples/profile.jsp">
-	              <i class="ni ni-single-02 text-yellow"></i> 프로필
+	              <i class="ni ni-single-02 text-purple"></i> 프로필
 	            </a>
           	</li>          
           <%}else{ %>
@@ -189,8 +140,9 @@
             </div>
           </div>
         </form>
- 		<!-- User -->
+ 		<!-- 유저화면 -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
+        <%if(user != null) {%>
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
@@ -204,31 +156,46 @@
             </a>
             <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
               <div class=" dropdown-header noti-title">
-                <h6 class="text-overflow m-0">Welcome!</h6>
+                <h6 class="text-overflow m-0">일반회원</h6>
               </div>
               <a href="./examples/profile.jsp" class="dropdown-item">
-                <i class="ni ni-single-02"></i>
-                <span>My profile</span>
-              </a>
-              <a href="./examples/profile.jsp" class="dropdown-item">
-                <i class="ni ni-settings-gear-65"></i>
-                <span>Settings</span>
-              </a>
-              <a href="./examples/profile.jsp" class="dropdown-item">
-                <i class="ni ni-calendar-grid-58"></i>
-                <span>Activity</span>
-              </a>
-              <a href="./examples/profile.jsp" class="dropdown-item">
-                <i class="ni ni-support-16"></i>
-                <span>Support</span>
+                <i class="ni ni-single-02 text-purple"></i>
+                <span>프로필</span>
               </a>
               <div class="dropdown-divider"></div>
-              <a href="#!" class="dropdown-item">
-                <i class="ni ni-user-run"></i>
-                <span>Logout</span>
+              <a href="./examples/logout.jsp" class="dropdown-item">
+                <i class="ni ni-key-25 text-dark"></i>
+                <span>로그아웃</span>
               </a>
             </div>
           </li>
+          <%}else{ %>
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <span class="avatar avatar-sm rounded-circle">
+                  <img alt="" src="../assets/img/user/비회원.png">
+                </span>
+                <div class="media-body ml-2 d-none d-lg-block">
+                  <span class="mb-0 text-sm  font-weight-bold">로그인을 하세요</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">방문을 환영합니다</h6>
+              </div>
+              <a href="./examples/login.jsp" class="dropdown-item">
+                <i class="ni ni-key-25 text-info"></i>
+                <span>로그인</span>
+              </a>
+              <a href="./examples/register.jsp" class="dropdown-item">
+                <i class="ni ni-circle-08 text-pink"></i>
+                <span>회원가입</span>
+              </a>
+            </div>
+          </li>
+          <%} %>
         </ul>
       </div>
     </nav>
@@ -349,11 +316,6 @@
           </div>
         </div>
       </div>
-
-
-
-
-
             <div class="row">
         <div class="col">
           <div class="card shadow">
@@ -370,12 +332,6 @@
           </div>
         </div>
       </div>
-
-
-
-
-      
-      <!-- Footer -->
       <!-- Footer -->
       <footer class="footer">
         <div class="row align-items-center justify-content-xl-between">
