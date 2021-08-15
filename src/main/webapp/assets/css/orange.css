@@ -231,6 +231,12 @@
     vertical-align: middle;
     border-style: none;
   }
+
+  /* tables 에 있는 이미지 */
+  .tables_img{
+  	width:80%;
+  	height:80%;
+   }
   
   svg {
     overflow: hidden;
