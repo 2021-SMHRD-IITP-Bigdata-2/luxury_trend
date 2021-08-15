@@ -1,8 +1,7 @@
 <%@page import="user.UserDAO"%>
 <%@page import="user.UserDTO"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%
 UserDTO user = (UserDTO) session.getAttribute("login");
@@ -110,22 +109,22 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 						if (user != null) {
 						%>
 						<li class="nav-item"><a class="nav-link"
-							href="../examples/logout.jsp"> <i
+							href="./logout.jsp"> <i
 								class="ni ni-key-25 text-dark"></i> 로그아웃
 						</a></li>
 						<li class="nav-item"><a class="nav-link "
-							href="../examples/profile.jsp"> <i
+							href="./profile.jsp"> <i
 								class="ni ni-single-02 text-purple"></i> 프로필
 						</a></li>
 						<%
 						} else {
 						%>
 						<li class="nav-item"><a class="nav-link"
-							href="./examples/login.jsp"> <i
+							href="./login.jsp"> <i
 								class="ni ni-key-25 text-info"></i> 로그인
 						</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="./examples/register.jsp"> <i
+							href="./register.jsp"> <i
 								class="ni ni-circle-08 text-purple"></i> 회원가입
 						</a></li>
 						<%
