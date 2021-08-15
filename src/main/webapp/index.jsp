@@ -149,8 +149,8 @@
 	            </a>
          	</li>
             <li class="nav-item">
-	            <a class="nav-link " href="../examples/profile.jsp">
-	              <i class="ni ni-single-02 text-yellow"></i> 프로필
+	            <a class="nav-link " href="./examples/profile.jsp">
+	              <i class="ni ni-single-02 text-purple"></i> 프로필
 	            </a>
           	</li>          
           <%}else{ %>
@@ -251,8 +251,6 @@
                       </div>
                     </div>
                   </div>
-                 
-                
                   <p class="mt-2 mb-0 text-muted text-sm">
                     <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 5.48%</span>
                     <span class="text-nowrap">Since last month</span>
@@ -343,15 +341,22 @@
                 </div>
                 <div class="col">
                   <ul class="nav nav-pills justify-content-end">
-                    <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[600, 1250, 1280, 1300, 1400, 1500, 1450, 1400, 1480]}]}}' data-prefix="" data-suffix="won">
+                    <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[1300, 1250, 1280, 1300, 1400, 1500, 1450, 1400, 1480]}]}}' data-prefix="" data-suffix="">
                       <a href="#" class="nav-link py-2 px-3 active" data-toggle="tab">
-                        <span class="d-none d-md-block">Month</span>
+                        <span class="d-none d-md-block">당근마켓</span>
                         <span class="d-md-none">M</span>
                       </a>
                     </li>
-                    <li class="nav-item" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[0, 20, 5, 25, 10, 30, 15, 40, 40]}]}}' data-prefix="$" data-suffix="k">
+                    <li class="nav-item" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[1500, 1200, 1320, 1200, 1500, 1400, 1350, 1500, 1400]}]}}' data-prefix="" data-suffix="">
                       <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
-                        <span class="d-none d-md-block">Week</span>
+                        <span class="d-none d-md-block">번개장터</span>
+                        <span class="d-md-none">W</span>
+                      </a>
+                    </li>
+                    
+                     <li class="nav-item" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[1300, 1400, 1350, 1400, 1450, 1350, 1400, 1500, 1450]}]}}' data-prefix="" data-suffix="">
+                      <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
+                        <span class="d-none d-md-block">중고나라</span>
                         <span class="d-md-none">W</span>
                       </a>
                     </li>
@@ -413,64 +418,35 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">
-                      (당근마켓) 샤넬 가방(퀼티드 펄장색 플랩백 미니 🖤 Cha...
+                    <th scope="row"><a href="https://www.daangn.com/articles/272864756">(당근마켓) ❤❤❤샤넬 쇼핑백, 프라다 쇼핑백... </a>
                     </th>
-                    <td>
-                      4,569
-                    </td>
-                    <td>
-                      340
-                    </td>
+                    <td> 4,569 </td>
+                    <td> 340 </td>
                   </tr>
                   <tr>
-                    <th scope="row">
-                      (당근마켓) 샤넬쉐브론금장엔벨롭클러치백(샤넬백,샤넬가방)
+                    <th scope="row"><a href="https://www.daangn.com/articles/268502910">(당근마켓) 미개봉새제품)샤넬 클래식 똑딱이 중지갑/샤넬 클래식 중지갑...</a>
                     </th>
-                    <td>
-                      3,985
-                    </td>
-                    <td>
-                      319
-                    </td>
-
+                    <td> 3,985 </td>
+                    <td> 319 </td>
                   </tr>
                   <tr>
-                    <th scope="row">
-                      (번개장터) (정품/풀셋) 샤넬 플랩백 15번대 금장
+                    <th scope="row"><a href="https://stuv4.app.goo.gl/Vx7pW">(번개장터) (정품/풀셋) 샤넬 플랩백 15번대 금장</a>
                     </th>
-                    <td>
-                      3,513
-                    </td>
-                    <td>
-                      294
-                    </td>
-
+                    <td> 3,513 </td>
+                    <td> 294 </td>
                   </tr>
                   <tr>
-                    <th scope="row">
-                      (번개장터) 샤넬 소프트캐비어 빈티지 아이보리 퀼팅...
+                    <th scope="row"><a href="https://stuv4.app.goo.gl/voA9G">(번개장터) 샤넬 소프트캐비어 빈티지 라지 (16번대)</a>
                     </th>
-                    <td>
-                      2,050
-                    </td>
-                    <td>
-                      147
-                    </td>
-
+                    <td> 2,050 </td>
+                    <td> 147 </td>
                   </tr>
                   <tr>
-                    <th scope="row">
-                      (중고나라) 샤넬 보이백 쉐브론 급매 400에 팝니다.
+                    <th scope="row"><a href="https://m.cafe.naver.com/joonggonara/859006360">(중고나라) 샤넬 보이백 미듐 그레이 쉐브론 은장</a>
                     </th>
-                    <td>
-                      1,795
-                    </td>
-                    <td>
-                      190
-                    </td>
-
-                  </tr>
+                    <td> 1,795 </td>
+                    <td> 190 </td>
+                   </tr>
                 </tbody>
               </table>
             </div>
@@ -565,7 +541,7 @@
         <div class="row align-items-center justify-content-xl-between">
           <div class="col-xl-6">
             <div class="copyright text-center text-xl-left text-muted">
-              &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">(주)황</a>
+              &copy; 2021 <a href="" class="font-weight-bold ml-1 footer-copy" target="_blank">(주)황</a>
             </div>
           </div>
           <div class="col-xl-6">
@@ -592,7 +568,7 @@
   <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
   <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <!--   Optional JS   -->
-  <script src="./assets/js/plugins/chart.js/dist/Chart.min.js"></script>
+	<script src="./assets/js/plugins/chart.js/dist/Chart.min.js"></script>
   <script src="./assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
   <!--   Argon JS   -->
   <script src="./assets/js/argon-dashboard.min.js?v=1.1.2"></script>
