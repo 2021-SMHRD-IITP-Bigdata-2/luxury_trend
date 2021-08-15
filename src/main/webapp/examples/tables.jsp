@@ -100,11 +100,11 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 				<ul class="navbar-nav mb-md-3">
 					<% if (user != null) { %>
 					<li class="nav-item"><a class="nav-link active"
-						href="../examples/tables.jsp"> <i
+						href="./tables.jsp"> <i
 							class="ni ni-bullet-list-67 text-purple"></i> 게시판
 					</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="../examples/tables.jsp"> <i
+						href="./question.jsp"> <i
 							class="ni ni-bulb-61 text-purple"></i> 문의사항
 					</a></li>
 					<% } else {	%>
@@ -126,7 +126,7 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 				<ul class="navbar-nav mb-md-3">
 					<% if (user != null) { %>
 					<li class="nav-item"><a class="nav-link" href="./logout.jsp">
-						<i class="ni ni-key-25 text-dark"></i> 로그아웃
+						<i class="ni ni-key-25 text-purple"></i> 로그아웃
 					</a></li>
 					<li class="nav-item"><a class="nav-link" href="./profile.jsp">
 						<i class="ni ni-single-02 text-purple"></i> 프로필
@@ -186,11 +186,11 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 							<div class=" dropdown-header noti-title">
 								<h6 class="text-overflow m-0">일반회원</h6>
 							</div>
-							<a href="./examples/profile.jsp" class="dropdown-item"> <i
+							<a href="./profile.jsp" class="dropdown-item"> <i
 								class="ni ni-single-02 text-purple"></i> <span>프로필</span>
 							</a>
 							<div class="dropdown-divider"></div>
-							<a href="./examples/logout.jsp" class="dropdown-item"> <i
+							<a href="./logout.jsp" class="dropdown-item"> <i
 								class="ni ni-key-25 text-purple"></i> <span>로그아웃</span>
 							</a>
 						</div></li>
