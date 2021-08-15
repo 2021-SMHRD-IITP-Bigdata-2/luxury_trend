@@ -60,16 +60,6 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="../examples/tables.jsp">
-                <span class="nav-link-inner--text">게시판</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="../examples/question.jsp">
-                <span class="nav-link-inner--text">문의사항</span>
-              </a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link nav-link-icon" href="../examples/register.jsp">
                 <span class="nav-link-inner--text">회원가입</span>
               </a>
