@@ -5,7 +5,7 @@
 
 <% UserDTO user = (UserDTO)session.getAttribute("login");%>
 
-<!-- 사이트 분석.. -->
+<!-- 사이트 분석 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +24,7 @@
   <link href="../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
   <link href="../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
   <!-- CSS Files -->
+  <link href="../assets/css/orange.css" rel="stylesheet" />
   <link href="../assets/css/site_analysis.css" rel="stylesheet" />
 </head>
 
@@ -91,11 +92,11 @@
 			<ul class="navbar-nav mb-md-3">
 				<% if (user != null) { %>
 				<li class="nav-item"><a class="nav-link"
-					href="../examples/tables.jsp"> <i
+					href="./tables.jsp"> <i
 						class="ni ni-bullet-list-67 text-purple"></i> 게시판
 				</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="../examples/question.jsp"> <i
+					href="./question.jsp"> <i
 						class="ni ni-bulb-61 text-purple"></i> 문의사항
 				</a></li>
 				<% } else {	%>
@@ -163,7 +164,7 @@
 					</a>
 					<div class="dropdown-divider"></div>
 					<a href="./logout.jsp" class="dropdown-item"> <i
-						class="ni ni-key-25 text-dark"></i> <span>로그아웃</span>
+						class="ni ni-key-25 text-purple"></i> <span>로그아웃</span>
 					</a>
 				</div></li>
 			<% } else { %>
@@ -546,13 +547,13 @@
     </footer>
   </div>
   <!--   Core   -->
-  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
-  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <!--   Optional JS   -->
-  <script src="./assets/js/plugins/chart.js/dist/Chart.min.js"></script>
-  <script src="./assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
+  <script src="../assets/js/plugins/chart.js/dist/Chart.min.js"></script>
+  <script src="../assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
   <!--   Argon JS   -->
-  <script src="./assets/js/argon-dashboard.min.js?v=1.1.2"></script>
+  <script src="../assets/js/argon-dashboard.min.js?v=1.1.2"></script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
     window.TrackJS &&
