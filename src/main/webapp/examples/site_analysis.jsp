@@ -4,6 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <% UserDTO user = (UserDTO)session.getAttribute("login");%>
+
 <!-- 사이트 분석.. -->
 
 <!DOCTYPE html>
@@ -37,140 +38,100 @@
       <a class="navbar-brand pt-0" href="../index.jsp">
         <img src="../assets/img/brand/logo.png" class="navbar-brand-img" alt="...">
       </a>
-      <!-- User -->
-      <ul class="nav align-items-center d-md-none">
-        <li class="nav-item dropdown">
-          <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ni ni-bell-55"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="media align-items-center">
-              <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="../assets/img/theme/team-1-800x800.jpg">
-              </span>
-            </div>
-          </a>
-          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-            <div class=" dropdown-header noti-title">
-              <h6 class="text-overflow m-0">Welcome!</h6>
-            </div>
-            <a href="../examples/profile.jsp" class="dropdown-item">
-              <i class="ni ni-single-02"></i>
-              <span>My profile</span>
-            </a>
-            <a href="../examples/profile.jsp" class="dropdown-item">
-              <i class="ni ni-settings-gear-65"></i>
-              <span>Settings</span>
-            </a>
-            <a href="../examples/profile.jsp" class="dropdown-item">
-              <i class="ni ni-calendar-grid-58"></i>
-              <span>Activity</span>
-            </a>
-            <a href="../examples/profile.jsp" class="dropdown-item">
-              <i class="ni ni-support-16"></i>
-              <span>Support</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#!" class="dropdown-item">
-              <i class="ni ni-user-run"></i>
-              <span>Logout</span>
-            </a>
-          </div>
-        </li>
-      </ul>
       <!-- 메뉴바 -->
       <div class="collapse navbar-collapse" id="sidenav-collapse-main">
         <!-- Collapse header -->
-        <div class="navbar-collapse-header d-md-none">
-          <div class="row">
-            <div class="col-6 collapse-brand">
-              <a href="../index.jsp">
-                <img src="../assets/img/brand/blue.png">
-              </a>
-            </div>
-            <div class="col-6 collapse-close">
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Form -->
-        <form class="mt-4 mb-3 d-md-none">
-          <div class="input-group input-group-rounded input-group-merge">
-            <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <span class="fa fa-search"></span>
-              </div>
-            </div>
-          </div>
-        </form>
-        <!-- 메뉴내용 -->
-        <ul class="navbar-nav">
-          <li class="nav-item  ">
-            <a class="nav-link " href="../index.jsp">
-              <i class="ni ni-tv-2 text-purple"></i> 스마트 분석
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="../examples/only.jsp">
-              <i class="ni ni-chart-pie-35 text-purple"></i> 상품 분석
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link active" href="../examples/site_analysis.jsp">
-              <i class="ni ni-diamond text-purple"></i> 사이트 분석
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="../examples/tables.jsp">
-              <i class="ni ni-bullet-list-67 text-purple"></i> 게시판
-            </a>
-          </li>
-        </ul>
-        <!-- Divider -->
-        <hr class="my-3">
-        <!-- Heading -->
-        <h6 class="navbar-heading text-muted">회원</h6>
-        <!-- Navigation -->
-        <ul class="navbar-nav mb-md-3">
-          <nav>
-          <%if(user != null) {%>
-          	<li class="nav-item">
-	            <a class="nav-link" href="../examples/logout.jsp">
-	              <i class="ni ni-key-25 text-dark"></i> 로그아웃
-	            </a>
-         	</li>
-            <li class="nav-item">
-	            <a class="nav-link " href="../examples/profile.jsp">
-	              <i class="ni ni-single-02 text-yellow"></i> 프로필
-	            </a>
-          	</li>          
-          <%}else{ %>
-	          <li class="nav-item">
-	            <a class="nav-link" href="./examples/login.jsp">
-	              <i class="ni ni-key-25 text-info"></i> 로그인
-	            </a>
-	          </li>   
-	          <li class="nav-item">
-	            <a class="nav-link" href="./examples/register.jsp">
-	              <i class="ni ni-circle-08 text-pink"></i> 회원가입
-	            </a>
-	          </li>
-          <%} %>
-          </nav>
-        </ul>
-      </div>
+			<div class="navbar-collapse-header d-md-none">
+				<div class="row">
+					<div class="col-6 collapse-brand">
+						<a href="../index.html"> <img
+							src="../assets/img/brand/blue.png">
+						</a>
+					</div>
+					<div class="col-6 collapse-close">
+						<button type="button" class="navbar-toggler"
+							data-toggle="collapse" data-target="#sidenav-collapse-main"
+							aria-controls="sidenav-main" aria-expanded="false"
+							aria-label="Toggle sidenav">
+							<span></span> <span></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- Form -->
+			<form class="mt-4 mb-3 d-md-none">
+				<div class="input-group input-group-rounded input-group-merge">
+					<input type="search"
+						class="form-control form-control-rounded form-control-prepended"
+						placeholder="Search" aria-label="Search">
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<span class="fa fa-search"></span>
+						</div>
+					</div>
+				</div>
+			</form>
+			<!-- 메뉴시작 -->
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link " href="../index.jsp">
+						<i class="ni ni-tv-2 text-purple"></i>스마트 분석
+				</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="../examples/only.jsp"> <i
+						class="ni ni-chart-pie-35 text-purple"></i> 상품 분석
+				</a></li>
+				<li class="nav-item"><a class="nav-link active"
+					href="../examples/site_analysis.jsp"> <i
+						class="ni ni-diamond text-purple"></i> 사이트 분석
+				</a></li>
+			</ul>
+			<!-- 게시판 문의사항 -->
+			<hr class="my-3">
+			<h6 class="navbar-heading text-muted">LUXURY</h6>
+			<ul class="navbar-nav mb-md-3">
+				<% if (user != null) { %>
+				<li class="nav-item"><a class="nav-link"
+					href="../examples/tables.jsp"> <i
+						class="ni ni-bullet-list-67 text-purple"></i> 게시판
+				</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="../examples/tables.jsp"> <i
+						class="ni ni-bulb-61 text-purple"></i> 문의사항
+				</a></li>
+				<% } else {	%>
+				<li class="nav-item"><a class="nav-link" href="#"
+					data-toggle="popover" data-placement="right"
+					data-content="로그인 후 사용 가능합니다"> <i
+						class="ni ni-bullet-list-67 text-purple"></i> 게시판
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="#"
+					data-toggle="popover" data-placement="right"
+					data-content="로그인 후 사용 가능합니다">
+					<i class="ni ni-bulb-61 text-purple"></i> 문의사항
+				</a></li>
+				<% } %>
+			</ul>
+			<!-- 로그인 회원가입 -->
+			<hr class="my-3">
+			<h6 class="navbar-heading text-muted">MEMBER</h6>
+			<ul class="navbar-nav mb-md-3">
+				<% if (user != null) { %>
+				<li class="nav-item"><a class="nav-link" href="./logout.jsp">
+					<i class="ni ni-key-25 text-purple"></i> 로그아웃
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="./profile.jsp">
+					<i class="ni ni-single-02 text-purple"></i> 프로필
+				</a></li>
+				<% } else {	%>
+				<li class="nav-item"><a class="nav-link" href="./login.jsp">
+						<i class="ni ni-key-25 text-purple"></i> 로그인
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="./register.jsp">
+					<i class="ni ni-circle-08 text-purple"></i> 회원가입
+				</a></li>
+				<% } %>
+			</ul>
+		</div>
     </div>
   </nav>
   <div class="main-content">
@@ -180,62 +141,55 @@
         <!-- Brand -->
         <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="../index.jsp">사이트 분석</a>
         <!-- 유저화면 -->
-        <ul class="navbar-nav align-items-center d-none d-md-flex">
-        <%if(user != null) {%>
-          <li class="nav-item dropdown">
-            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div class="media align-items-center">
-                <span class="avatar avatar-sm rounded-circle">
-                  <img alt="" src="https://t1.daumcdn.net/cfile/blog/99B7C0385ADDFED01A">
-                </span>
-                <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">Eunbi Hwang</span>
-                </div>
-              </div>
-            </a>
-            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-              <div class=" dropdown-header noti-title">
-                <h6 class="text-overflow m-0">일반회원</h6>
-              </div>
-              <a href="./examples/profile.jsp" class="dropdown-item">
-                <i class="ni ni-single-02 text-purple"></i>
-                <span>프로필</span>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="./examples/logout.jsp" class="dropdown-item">
-                <i class="ni ni-key-25 text-dark"></i>
-                <span>로그아웃</span>
-              </a>
-            </div>
-          </li>
-          <%}else{ %>
-          <li class="nav-item dropdown">
-            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div class="media align-items-center">
-                <span class="avatar avatar-sm rounded-circle">
-                  <img alt="" src="../assets/img/user/비회원.png">
-                </span>
-                <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">로그인을 하세요</span>
-                </div>
-              </div>
-            </a>
-            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-              <div class=" dropdown-header noti-title">
-                <h6 class="text-overflow m-0">방문을 환영합니다</h6>
-              </div>
-              <a href="./examples/login.jsp" class="dropdown-item">
-                <i class="ni ni-key-25 text-info"></i>
-                <span>로그인</span>
-              </a>
-              <a href="./examples/register.jsp" class="dropdown-item">
-                <i class="ni ni-circle-08 text-pink"></i>
-                <span>회원가입</span>
-              </a>
-            </div>
-          </li>
-          <%} %>
-        </ul>
+		<ul class="navbar-nav align-items-center d-none d-md-flex">
+			<% if (user != null) { %>
+			<li class="nav-item dropdown">
+				<a href="#" class="nav-link pr-0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<div class="media align-items-center">
+						<span class="avatar avatar-sm rounded-circle">
+							<img alt="" src="https://t1.daumcdn.net/cfile/blog/99B7C0385ADDFED01A">
+						</span>
+						<div class="media-body ml-2 d-none d-lg-block">
+							<span class="mb-0 text-sm  font-weight-bold">황은비</span>
+						</div>
+					</div>
+				</a>
+				<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+					<div class=" dropdown-header noti-title">
+						<h6 class="text-overflow m-0">일반회원</h6>
+					</div>
+					<a href="./profile.jsp" class="dropdown-item"> <i
+						class="ni ni-single-02 text-purple"></i> <span>프로필</span>
+					</a>
+					<div class="dropdown-divider"></div>
+					<a href="./logout.jsp" class="dropdown-item"> <i
+						class="ni ni-key-25 text-dark"></i> <span>로그아웃</span>
+					</a>
+				</div></li>
+			<% } else { %>
+			<li class="nav-item dropdown">
+				<a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<div class="media align-items-center">
+						<span class="avatar avatar-sm rounded-circle">
+							<img alt="" src="../assets/img/user/비회원.png">
+						</span>
+						<div class="media-body ml-2 d-none d-lg-block">
+							<span class="mb-0 text-sm  font-weight-bold">비회원</span>
+						</div>
+					</div>
+				</a>
+				<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+					<div class=" dropdown-header noti-title">
+						<h6 class="text-overflow m-0">방문을 환영합니다</h6>
+					</div>
+					<a href="./login.jsp" class="dropdown-item"> <i
+						class="ni ni-key-25 text-info text-purple"></i> <span>로그인</span>
+					</a> <a href="./register.jsp" class="dropdown-item"> <i
+						class="ni ni-circle-08 text-purple"></i> <span>회원가입</span>
+					</a>
+				</div></li>
+			<% } %>
+		</ul>
       </div>
     </nav>
     <!-- End Navbar -->
@@ -246,60 +200,9 @@
           <!-- Card stats -->
           <!---->
           <div class="row">
-            <div class="col-xl-4 col-lg-6">
-              <!--
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h2 class="card-title text-uppercase mb-0 text-center">비교 브랜드 순위</h2>
-                    </div>
-                  </div>
-                  <p class="mt-8 mb-0 text-muted text-sm">
-                    <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
-                    <span class="text-nowrap">Since last week</span>
-                  </p>
-                </div>   
-              </div>
-            -->
-            </div>
-            <div class="col-xl-4 col-lg-6">
-              <!--
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h2 class="card-title text-uppercase mb-0">전체 상품 순위</h2>
-                      <span class="h2 font-weight-bold mb-0">924</span>
-                    </div>
-                  </div>
-                  <p class="mt-3 mb-0 text-muted text-sm">
-                    <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
-                    <span class="text-nowrap">Since yesterday</span>
-                  </p>
-                </div>
-              </div>
-            -->
-            </div>
-            <div class="col-xl-4 col-lg-6">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <!--
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h2 class="card-title text-uppercase mb-0">중고 플랫폼 순위</h2>
-                      <span class="h2 font-weight-bold mb-0">49,65%</span>
-                    </div>
-
-                  </div>
-                  <p class="mt-3 mb-0 text-muted text-sm">
-                    <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
-                    <span class="text-nowrap">Since last month</span>
-                  </p>
-                </div>
-              -->
-              </div>
-            </div>
+            <div class="col-xl-4 col-lg-6"></div>
+            <div class="col-xl-4 col-lg-6"></div>
+            <div class="col-xl-4 col-lg-6"></div>
           </div>
         </div>
       </div>
@@ -320,29 +223,29 @@
               <table class="table align-items-center table-flush text-center">
                 <thead class="thead-light">
                   <tr class="text-center">
-                    <th scope="col">순위</th>
-                    <th scope="col">브랜드명</th>
-                    <th scope="col">순위변동</th>
+                    <th scope="col" style="font-size:15px;">순위</th>
+                    <th scope="col" style="font-size:15px;">브랜드명</th>
+                    <th scope="col" style="font-size:15px;">순위변동</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td> 1 </td>
-                    <td> 브랜드명 </td>
+                    <td> 샤넬 </td>
+                    <td>
+                      <i class="fas mr-3"></i> -
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> 2 </td>
+                    <td> 프라다 </td>
                     <td>
                       <i class="fas fa-arrow-up text-success mr-3"></i> 2
                     </td>
                   </tr>
                   <tr>
-                    <td> 2 </td>
-                    <td> 브랜드명 </td>
-                    <td>
-                      <i class="fas fa-arrow-down text-warning mr-3"></i> 1
-                    </td>
-                  </tr>
-                  <tr>
                     <td> 3 </td>
-                    <td> 브랜드명 </td>
+                    <td> 구찌 </td>
                     </td>
                     <td>
                       <i class="fas fa-arrow-down text-warning mr-3"></i> 1
@@ -350,63 +253,63 @@
                   </tr>
                   <tr>
                     <td> 4 </td>
-                    <td> 브랜드명 </td>
+                    <td> 루이비통 </td>
                     <td>
-                      <i class="fas text-success mr-3"></i> -
+                      <i class="fas  fa-arrow-down text-success text-warning mr-3"></i> 1
                     </td>
                   </tr>
                   <tr>
                     <td> 5 </td>
-                    <td> 브랜드명 </td>
+                    <td> 에르메스 </td>
                     <td>
                       <i class="fas text-danger mr-3"></i> -
                     </td>
                   </tr>
                   <tr>
                     <td> 6 </td>
-                    <td> 브랜드명 </td>
+                    <td> - </td>
                     <td>
                       <i class="fas text-danger mr-3"></i> -
                     </td>
                   </tr>
                   <tr>
                     <td> 7 </td>
-                    <td> 브랜드명 </td>
+                    <td> - </td>
                     <td>
                       <i class="fas text-danger mr-3"></i> -
                     </td>
                   </tr>
                   <tr>
                     <td> 8 </td>
-                    <td> 브랜드명 </td>
+                    <td> - </td>
                     <td>
                       <i class="fas text-danger mr-3"></i> -
                     </td>
                   </tr>
                   <tr>
                     <td> 9 </td>
-                    <td> 브랜드명 </td>
+                    <td> - </td>
                     <td>
-                      <i class="fas fa-arrow-down text-danger mr-3"></i> 1
+                      <i class="fas mr-3"></i> -
                     </td>
                   </tr>
                   <tr>
                     <td> 10 </td>
-                    <td> 브랜드명 </td>
+                    <td> - </td>
                     <td>
-                      <i class="fas fa-arrow-up text-danger mr-3"></i> 1
+                      <i class="fas mr-3"></i> -
                     </td>
                   </tr>
                   <tr>
                     <td> 11 </td>
-                    <td> 브랜드명 </td>
+                    <td> - </td>
                     <td>
                       <i class="fas text-danger mr-3"></i> -
                     </td>
                   </tr>
                   <tr>
                     <td> 12 </td>
-                    <td> 브랜드명 </td>
+                    <td> - </td>
                     <td>
                       <i class="fas text-danger mr-3"></i> -
                     </td>
@@ -430,29 +333,29 @@
             <table class="table align-items-center table-flush text-center">
               <thead class="thead-light">
                 <tr class="text-center">
-                  <th scope="col">순위</th>
-                  <th scope="col">상품명</th>
-                  <th scope="col">순위변동</th>
+                  <th scope="col" style="font-size:15px;">순위</th>
+                  <th scope="col" style="font-size:15px;">상품명</th>
+                  <th scope="col" style="font-size:15px;">순위변동</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td> 1 </td>
-                  <td> 상품명 </td>
+                  <td> 샤넬 클래식 </td>
                   <td>
                     <i class="fas fa-arrow-up text-success mr-3"></i> 2
                   </td>
                 </tr>
                 <tr>
                   <td> 2 </td>
-                  <td> 상품명 </td>
+                  <td> 구찌 디오니서스 </td>
                   <td>
                     <i class="fas fa-arrow-down text-warning mr-3"></i> 1
                   </td>
                 </tr>
                 <tr>
                   <td> 3 </td>
-                  <td> 상품명 </td>
+                  <td> 프라다 두블레 </td>
                   </td>
                   <td>
                     <i class="fas fa-arrow-down text-warning mr-3"></i> 1
@@ -460,63 +363,63 @@
                 </tr>
                 <tr>
                   <td> 4 </td>
-                  <td> 상품명 </td>
+                  <td> 샤넬 2.55 </td>
                   <td>
                     <i class="fas text-success mr-3"></i> -
                   </td>
                 </tr>
                 <tr>
                   <td> 5 </td>
-                  <td> 상품명 </td>
+                  <td> 구찌 gg마몽 </td>
                   <td>
                     <i class="fas text-danger mr-3"></i> -
                   </td>
                 </tr>
                 <tr>
                   <td> 6 </td>
-                  <td> 상품명 </td>
+                  <td> 프라다 클레오백 </td>
                   <td>
                     <i class="fas text-danger mr-3"></i> -
                   </td>
                 </tr>
                 <tr>
                   <td> 7 </td>
-                  <td> 상품명 </td>
+                  <td> 구찌 홀리빗 1955 </td>
                   <td>
                     <i class="fas text-danger mr-3"></i> -
                   </td>
                 </tr>
                 <tr>
                   <td> 8 </td>
-                  <td> 상품명 </td>
+                  <td> 구찌 재키 1961 </td>
                   <td>
                     <i class="fas text-danger mr-3"></i> -
                   </td>
                 </tr>
                 <tr>
                   <td> 9 </td>
-                  <td> 상품명 </td>
+                  <td> 보이 샤넬 </td>
                   <td>
                     <i class="fas fa-arrow-down text-danger mr-3"></i> 1
                   </td>
                 </tr>
                 <tr>
                   <td> 10 </td>
-                  <td> 상품명 </td>
+                  <td> 샤넬 가브리엘 </td>
                   <td>
                     <i class="fas fa-arrow-up text-danger mr-3"></i> 1
                   </td>
                 </tr>
                 <tr>
                   <td> 11 </td>
-                  <td> 상품명 </td>
+                  <td> 샤넬 램스킨 아코디언 </td>
                   <td>
                     <i class="fas text-danger mr-3"></i> -
                   </td>
                 </tr>
                 <tr>
                   <td> 12 </td>
-                  <td> 상품명 </td>
+                  <td> 에르메스 가든파티 </td>
                   <td>
                     <i class="fas text-danger mr-3"></i> -
                   </td>
@@ -542,9 +445,9 @@
             <table class="table align-items-center table-flush text-center">
               <thead class="thead-light">
                 <tr class="text-center">
-                  <th scope="col">순위</th>
-                  <th scope="col">사이트명</th>
-                  <th scope="col">순위변동</th>
+                  <th scope="col" style="font-size:15px;">순위</th>
+                  <th scope="col" style="font-size:15px;">사이트명</th>
+                  <th scope="col" style="font-size:15px;">순위변동</th>
                 </tr>
               </thead>
               <tbody>
@@ -622,7 +525,7 @@
             <div class="copyright text-center text-xl-left text-muted">
               &copy; 2021 <a href="" class="font-weight-bold ml-1 footer-copy" target="_blank">(주)황</a>
             </div>
-  	</div>
+          </div>
         <div class="col-xl-6">
           <ul class="nav nav-footer justify-content-center justify-content-xl-end">
             <li class="nav-item">
