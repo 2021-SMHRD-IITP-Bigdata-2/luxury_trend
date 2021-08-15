@@ -1,5 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page import="user.UserDAO"%>
+<%@page import="user.UserDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<% UserDTO user = (UserDTO)session.getAttribute("login");%>
     
 <!DOCTYPE html>
 <html lang="en">
@@ -139,21 +143,31 @@
         <h6 class="navbar-heading text-muted">회원</h6>
         <!-- Navigation -->
         <ul class="navbar-nav mb-md-3">
-          <li class="nav-item">
-            <a class="nav-link" href="../examples/login.jsp">
-              <i class="ni ni-key-25 text-info"></i> 로그인
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../examples/register.jsp">
-              <i class="ni ni-circle-08 text-pink"></i> 회원가입
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="../examples/profile.jsp">
-              <i class="ni ni-single-02 text-yellow"></i> 프로필
-            </a>
-          </li>
+          <nav>
+          <%if(user != null) {%>
+          	<li class="nav-item">
+	            <a class="nav-link" href="../examples/logout.jsp">
+	              <i class="ni ni-key-25 text-dark"></i> 로그아웃
+	            </a>
+         	</li>
+            <li class="nav-item">
+	            <a class="nav-link " href="../examples/profile.jsp">
+	              <i class="ni ni-single-02 text-yellow"></i> 프로필
+	            </a>
+          	</li>          
+          <%}else{ %>
+	          <li class="nav-item">
+	            <a class="nav-link" href="./examples/login.jsp">
+	              <i class="ni ni-key-25 text-info"></i> 로그인
+	            </a>
+	          </li>   
+	          <li class="nav-item">
+	            <a class="nav-link" href="./examples/register.jsp">
+	              <i class="ni ni-circle-08 text-pink"></i> 회원가입
+	            </a>
+	          </li>
+          <%} %>
+          </nav>
         </ul>
       </div>
     </div>
