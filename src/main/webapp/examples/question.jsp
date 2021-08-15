@@ -45,7 +45,7 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 				alt="...">
 			</a>
 			<!-- Collapse -->
-			<div class="collapse navbar-collapse" id="sidenav-collapse-main">
+				<div class="collapse navbar-collapse" id="sidenav-collapse-main">
 				<!-- Collapse header -->
 				<div class="navbar-collapse-header d-md-none">
 					<div class="row">
@@ -93,15 +93,15 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 				</ul>
 				<!-- 게시판 문의사항 -->
 				<hr class="my-3">
-				<!-- <h6 class="navbar-heading text-muted">회원</h6> -->
+				<h6 class="navbar-heading text-muted">LUXURY</h6>
 				<ul class="navbar-nav mb-md-3">
 					<% if (user != null) { %>
 					<li class="nav-item"><a class="nav-link"
-						href="../examples/tables.jsp"> <i
+						href="./tables.jsp"> <i
 							class="ni ni-bullet-list-67 text-purple"></i> 게시판
 					</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						href="../examples/tables.jsp"> <i
+						href="./question.jsp"> <i
 							class="ni ni-bulb-61 text-purple"></i> 문의사항
 					</a></li>
 					<% } else {	%>
@@ -119,10 +119,11 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 				</ul>
 				<!-- 로그인 회원가입 -->
 				<hr class="my-3">
+				<h6 class="navbar-heading text-muted">MEMBER</h6>
 				<ul class="navbar-nav mb-md-3">
 					<% if (user != null) { %>
 					<li class="nav-item"><a class="nav-link" href="./logout.jsp">
-						<i class="ni ni-key-25 text-dark"></i> 로그아웃
+						<i class="ni ni-key-25 text-purple"></i> 로그아웃
 					</a></li>
 					<li class="nav-item"><a class="nav-link" href="./profile.jsp">
 						<i class="ni ni-single-02 text-purple"></i> 프로필
@@ -295,6 +296,10 @@ UserDTO user = (UserDTO) session.getAttribute("login");
                   	<textarea style="height:500px; color:black;" class="form-control" id="" placeholder="문의 사항을 작성해주세요."></textarea>
                   </td>
                 </tr>
+                <tr>
+                	<td colspan="2"></td>
+                	<td><a href="#" style="float:right;" class="btn btn-primary" role="button">문의하기</a></td>
+               	</tr>
               </tbody>
             </table>
           </div>
