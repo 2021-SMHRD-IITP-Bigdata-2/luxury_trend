@@ -188,7 +188,7 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 									alt="" src="../assets/img/user/비회원.png">
 								</span>
 								<div class="media-body ml-2 d-none d-lg-block">
-									<span class="mb-0 text-sm  font-weight-bold">로그인을 하세요</span>
+									<span class="mb-0 text-sm  font-weight-bold">비회원</span>
 								</div>
 							</div>
 					</a>
@@ -196,9 +196,9 @@ UserDTO user = (UserDTO) session.getAttribute("login");
 							<div class=" dropdown-header noti-title">
 								<h6 class="text-overflow m-0">방문을 환영합니다</h6>
 							</div>
-							<a href="./examples/login.jsp" class="dropdown-item"> <i
-								class="ni ni-key-25 text-info"></i> <span>로그인</span>
-							</a> <a href="./examples/register.jsp" class="dropdown-item"> <i
+							<a href="./login.jsp" class="dropdown-item"> <i
+								class="ni ni-key-25 text-purple"></i> <span>로그인</span>
+							</a> <a href="./register.jsp" class="dropdown-item"> <i
 								class="ni ni-circle-08 text-purple"></i> <span>회원가입</span>
 							</a>
 						</div></li>
