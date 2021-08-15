@@ -95,7 +95,7 @@
 						class="ni ni-bullet-list-67 text-purple"></i> 게시판
 				</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="../examples/tables.jsp"> <i
+					href="../examples/question.jsp"> <i
 						class="ni ni-bulb-61 text-purple"></i> 문의사항
 				</a></li>
 				<% } else {	%>
